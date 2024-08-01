@@ -1,0 +1,70 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #FFFFFF;
+  color: #111111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+}
+
+.logo {
+  margin-bottom: 30px;
+}
+
+.logo img {
+  max-width: 100px;
+  height: auto;
+}
+
+.logo h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2em;
+  margin: 10px 0 0 0;
+}
+
+.main-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5em;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.subheading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.incentive-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+  .logo img {
+      max-width: 100px;
+  }
+
+  .main-heading {
+      font-size: 2.5em;
+  }
+  
+  .subheading {
+      font-size: 1.3em;
+  }
+
+  .incentive-text {
+      font-size: 1em;
+  }
+}
