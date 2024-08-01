@@ -54,6 +54,15 @@ body {
   margin: 10px 0;
 }
 
+.subheading a {
+    color: #8093F1; /* Brand blue color */
+    text-decoration: none;
+}
+
+.subheading a:hover {
+    text-decoration: underline;
+}
+
 .incentive-text {
   font-family: 'Roboto', sans-serif;
   font-size: 1.2em;
