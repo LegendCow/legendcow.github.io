@@ -69,6 +69,14 @@ body {
   margin: 10px 0;
 }
 
+.contact-prompt {
+  margin-top: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  color: #111111;
+  text-align: center;
+}
+
 @media (max-width: 600px) {
   .logo img {
       max-width: 100px;
