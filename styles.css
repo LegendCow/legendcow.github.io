@@ -27,7 +27,7 @@ body {
 }
 
 .logo {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .logo img {
@@ -45,7 +45,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 3.5em;
   font-weight: 700;
-  margin: 20px 0;
+  margin: 20px 0 0 0;
 }
 
 .subheading {
@@ -55,7 +55,7 @@ body {
 }
 
 .subheading a {
-    color: #8093F1; /* Brand blue color */
+    color: #8093F1;
     text-decoration: none;
 }
 
@@ -63,18 +63,19 @@ body {
     text-decoration: underline;
 }
 
-.incentive-text {
+.incentive-text, .mission-statement {
   font-family: 'Roboto', sans-serif;
   font-size: 1.2em;
   margin: 10px 0;
 }
 
-.contact-prompt {
-  margin-top: 40px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1em;
-  color: #111111;
-  text-align: center;
+.mission-statement {
+  /* font-style: italic; */
+  margin: 10px 0 20px 0;
+}
+
+.socials {
+  margin: 20px 0 0 0;
 }
 
 @media (max-width: 600px) {
@@ -90,7 +91,7 @@ body {
       font-size: 1.2em;
   }
 
-  .incentive-text {
+  .incentive-text, .mission-statement {
       font-size: 1em;
   }
 }
