@@ -1,97 +1,205 @@
-html, body {
-    overflow-x: hidden;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #FFFFFF;
-  color: #111111;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-  text-align: center;
-  padding: 0;
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  filter: grayscale(100%);
+  opacity: 0.1;
+  z-index: -1;
 }
 
 .container {
-  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0 0 0 20px;
+}
+
+header nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+}
+
+header nav ul li a:hover {
+  color: #666;
+}
+
+header .logo-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+header .logo {
+  max-width: 50px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.content {
+  padding: 40px;
+  max-width: 850px;
   width: 100%;
-  padding: 20px;
+  box-sizing: border-box;
+  padding: 0;
 }
 
-.logo {
-  margin-bottom: 20px;
-}
-
-.logo img {
-  max-width: 100px;
-  height: auto;
-}
-
-.logo h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.2em;
-  margin: 10px 0 0 0;
-}
-
-.main-heading {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3.5em;
+.content h1 {
+  font-size: 4.5em;
+  margin-bottom: 0.1em;
   font-weight: 700;
-  margin: 20px 0 0 0;
 }
 
-.subheading {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.5em;
-  margin: 10px 0;
-}
-
-.subheading a {
-    color: #8093F1;
-    text-decoration: none;
-}
-
-.subheading a:hover {
-    text-decoration: underline;
-}
-
-.incentive-text, .mission-statement {
-  font-family: 'Roboto', sans-serif;
+.content p {
   font-size: 1.2em;
-  margin: 10px 0;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
 }
 
-.mission-statement {
-  /* font-style: italic; */
-  margin: 10px 0 20px 0;
+.join-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #8093f1;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  letter-spacing: 0.2em;
+  border: 2px solid #8093f1;
 }
 
-.socials {
-  margin: 20px 0 0 0;
+.join-btn:hover {
+  background-color: rgba(255, 255, 255, 0);
+  color: #8093f1;
 }
 
-@media (max-width: 600px) {
-  .logo img {
-      max-width: 100px;
+footer {
+  text-align: center;
+  padding: 20px;
+  flex-shrink: 0;
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 0.875em;
+}
+
+footer .social-links a {
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  body::before {
+    background: url('background-2.jpg') no-repeat center center fixed;
+    background-size: cover;
   }
 
-  .main-heading {
-      font-size: 2.2em;
-  }
-  
-  .subheading {
-      font-size: 1.2em;
+  .content h1 {
+    font-size: 3em;
   }
 
-  .incentive-text, .mission-statement {
-      font-size: 1em;
+  .content p {
+    font-size: 1em;
+  }
+
+  main {
+    margin-top: -100px;
+  }
+
+  .join-btn {
+    padding: 10px 20px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  header nav ul li {
+    flex: 1;
+    text-align: center;
+  }
+
+  header nav ul li.logo-link {
+    order: 1;
+    flex: 0;
+  }
+
+  header nav ul li:nth-child(1) {
+    order: 0;
+    width: 33%;
+  }
+
+  header nav ul li:nth-child(3) {
+    order: 2;
+    width: 33%;
+  }
+
+  header .logo-link {
+    position: static;
+    transform: none;
+  }
+
+  header .logo {
+    margin: 0 auto;
+  }
+
+  header nav ul li a {
+    font-size: 0.9em;
   }
 }
